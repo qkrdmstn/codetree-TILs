@@ -10,14 +10,25 @@ int main() {
         if(a<c)
             printf("%d", a);
         else
-            printf("%d", c);
+        {
+            if(b<c)
+                printf("%d", b);
+            else    
+                printf("%d", c);
+
+        }
     }
     else
     {
         if(a>c)
             printf("%d", a);
         else
-            printf("%d", c);
+        {
+            if(b>c)
+                printf("%d", c);
+            else   
+                printf("%d", b);
+        }
     }
     return 0;
 }
