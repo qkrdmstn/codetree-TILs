@@ -6,9 +6,7 @@ int main() {
     int sum = a + b + c;
 
     //합 복사
-    a = sum;
-    b = sum;
-    c = sum;
+    a = b = c = sum;
 
     //출력
     printf("%d %d %d", a, b, c);
