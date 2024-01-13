@@ -2,7 +2,7 @@
 
 int main() {
     //변수 선언
-    char a[15];
+    char a[100];
 
     //입력
     scanf("%s", a);
