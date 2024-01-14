@@ -11,7 +11,7 @@ int main() {
 
     for(int i=0; i<n; i++)
     {
-        if(a[i] % 3 == 0)
+        if(a[i] % 3 == 0 && a[i] % 2 ==1)
             printf("%d\n", a[i]);
     }
     return 0;
