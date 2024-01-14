@@ -10,14 +10,10 @@ int main() {
         {
             for(int j=0; j<n-i-1; j++)
                 printf(" ");
-            for(int k=0; k<n+i; k++)
+            for(int k=0; k<2*i+1; k++)
             {
                 if(k%2 == 0)
-                {
                     printf("*");
-                    if(i==0)
-                        break;
-                }
                 else
                     printf(" ");
             }
@@ -26,14 +22,10 @@ int main() {
         {
             for(int j=0; j<i+1-n; j++)
                 printf(" ");
-            for(int k=0; k<3*n-2-i; k++)
+            for(int k=0; k<2*(2*n-2 - i)+1; k++)
             {
                 if(k%2 == 0)
-                {
                     printf("*");
-                    if(i==2*n-2)
-                        break;
-                }
                 else
                     printf(" ");
             }
