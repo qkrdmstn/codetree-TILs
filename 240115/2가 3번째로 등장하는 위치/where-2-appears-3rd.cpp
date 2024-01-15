@@ -9,11 +9,14 @@ int main() {
     {
         scanf("%d", &a[i]);
         if(a[i] == 2)
+        {
             cnt++;
-        if(cnt==3)
-            index = i;
+            if(cnt==3)
+                index = i;
+        }
+
     }
 
-    printf("%d", index - 1);
+    printf("%d", index + 1);
     return 0;
 }
