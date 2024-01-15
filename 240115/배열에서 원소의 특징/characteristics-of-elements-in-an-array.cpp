@@ -1,7 +1,7 @@
 #include <iostream>
 
 int main() {
-    int a[10], index;
+    int a[10], index=0;
 
     for(int i=0; i<10; i++)
     {
