@@ -12,6 +12,8 @@ int main() {
         {
             printf("%c ", 'A'+ cnt);
             cnt++;
+            if(cnt > 26)
+                cnt = 0;
         }
         printf("\n");
     }
