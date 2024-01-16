@@ -11,14 +11,12 @@ int main() {
     {
         string c;
         for(int j=0; j<b.length(); j++)
-        {
             c += a[i+j];
-        }
 
         if(c == b)
             cnt++;
     }
 
-   cout << cnt;
+    cout << cnt;
     return 0;
 }
