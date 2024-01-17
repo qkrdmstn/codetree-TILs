@@ -3,12 +3,13 @@ using namespace std;
 
 void function(int n, int m)
 {
-    int large, sol;
+    int small, sol;
     if(n>m)
-        large=n;
+        small=m;
     else
-        large=m;
-    for(int i=1; i<=large; i++)
+        small=n;
+        
+    for(int i=1; i<=small; i++)
     {
         if(n%i==0 && m%i==0)
             sol = i;
