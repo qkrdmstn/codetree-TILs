@@ -6,11 +6,14 @@ int game(int a, int b)
     int cnt = 0;
     for(int i=a; i<=b; i++)
     {
-        if(i == 3 || i == 6 || i == 9 || i%3 == 0)
+        int i1 = i%10;
+        int i10 = i/10;
+        if(i1 % 3 ==0 || i10 % 3 == 0 || i%3 == 0)
             cnt++;
     }
     return cnt;
 }
+
 int main() {
     int a, b;
     cin >> a >> b;
