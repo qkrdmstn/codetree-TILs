@@ -8,8 +8,23 @@ int game(int a, int b)
     {
         int i1 = i%10;
         int i10 = i/10;
-        if((i1 % 3 == 0 && i1 != 0) || (i10 % 3 == 0 && i10 != 0)|| i%3 == 0)
+        if(i%3 == 0)
+        {
             cnt++;
+            continue;
+        }
+        
+        if(i1 == 3 || i1 == 9 || i1 == 6)
+        {
+            cnt++;
+            continue;
+        }
+
+        if(i10 == 3 || i10 == 9 || i10 == 6)
+        {
+            cnt++;
+            continue;
+        }
     }
     return cnt;
 }
