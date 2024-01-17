@@ -3,13 +3,11 @@ using namespace std;
 
 int FindMin(int a, int b, int c)
 {
-    int arr[3] = {a, b, c};
-    int min = 111;
-    for(int i=0; i<3; i++)
-    {
-        if(arr[i]<min)
-            min = arr[i];
-    }
+    int min = a;
+    if(b<min)
+        min = b;
+    if(c<min)
+        min = c;
 
     return min;
 }
