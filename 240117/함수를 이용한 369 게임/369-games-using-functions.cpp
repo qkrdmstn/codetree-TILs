@@ -8,7 +8,7 @@ int game(int a, int b)
     {
         int i1 = i%10;
         int i10 = i/10;
-        if(i1 % 3 ==0 || i10 % 3 == 0 || i%3 == 0)
+        if((i1 % 3 == 0 && i1 != 0) || (i10 % 3 == 0 && i10 != 0)|| i%3 == 0)
             cnt++;
     }
     return cnt;
