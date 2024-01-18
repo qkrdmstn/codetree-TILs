@@ -19,6 +19,7 @@ int SumPrime(int a, int b)
         if(isPrime(i))
             sum+=i;
     }
+    printf("%d\n", sum)
     return sum;
 }
 
