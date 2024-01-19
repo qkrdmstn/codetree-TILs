@@ -20,6 +20,7 @@ int Compare()
         if(flag)
             return i;
     }
+    return -1;
 }
 
 int main() {
