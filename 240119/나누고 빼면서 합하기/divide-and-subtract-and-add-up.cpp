@@ -15,6 +15,7 @@ int func()
         else
             m-=1;
     }
+    return sum;
 }
 
 int main() {
