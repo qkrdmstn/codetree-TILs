@@ -9,13 +9,13 @@ int func()
     int sum=0;
     while(m!=1)
     {
-        sum += arr[m];
+        sum += arr[m-1];
         if(m%2 == 0)
-            m/=2;
+            m /= 2;
         else
-            m-=1;
+            m -= 1;
     }
-    return sum;
+    return sum + arr[0];
 }
 
 int main() {
@@ -23,9 +23,7 @@ int main() {
     for(int i=0; i<n; i++)
         cin >> arr[i];
         
-    func();
+    cout << func();
 
-    for(int i=0; i<n; i++)
-        cout << arr[i];
     return 0;
 }
