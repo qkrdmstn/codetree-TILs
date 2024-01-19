@@ -9,6 +9,7 @@ void Print(int n)
     Print(n-1);
     cout << n << " ";
 }
+
 int main() {
     int n;
     cin >> n;
