@@ -18,7 +18,7 @@ int main() {
     {
         if((i+1)%2 == 1)
         {
-            sort(a, a + i);
+            sort(a, a + i + 1);
             cout << a[i/2] << " ";
         }
     }
