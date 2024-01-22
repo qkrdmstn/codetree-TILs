@@ -10,20 +10,9 @@ int main() {
     sort(str1.begin(), str1.end());
     sort(str2.begin(), str2.end());
 
-    if(str1.length() != str2.length())
-    {
+    if(str1.compare(str2) == 0)
+        cout << "Yes";
+    else
         cout << "No";
-        return 0;
-    }
-
-    for(int i=0; i<str1.length(); i++)
-    {
-        if(str1[i] != str2[i])
-        {
-            cout << "No";
-            return 0;
-        }
-    }
-    cout << "Yes";
     return 0;
 }
