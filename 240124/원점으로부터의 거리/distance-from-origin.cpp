@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
-#include <cmath>
 using namespace std;
 
 class Point
@@ -17,8 +16,12 @@ Point(int _x = 0, int _y = 0, int _num = -1)
     x = _x;
     y = _y;
     num = _num;
-
-    dist = abs(x) + abs(y);
+    
+    if(_x < 0)
+        _x *= -1;
+    if(_y < 0)
+        _y *= -1;   
+    dist = _x + _y;
 }
 
 void Print()
