@@ -15,8 +15,13 @@ Point(int _x = 0, int _y = 0, int _num = -1)
 {
     x = _x;
     y = _y;
-    dist = x + y;
     num = _num;
+    
+    if(_x < 0)
+        _x *= -1;
+    if(_y < 0)
+        _y *= -1;   
+    dist = _x + _y;
 }
 
 void Print()
