@@ -13,9 +13,11 @@ int main() {
     cin >> m1 >> d1 >> m2 >> d2;
     cin >> A;
 
-    while(A != weeks[d1%7])
-        d1++;
+    int index = 0;
+    while(A != weeks[index])
+        index++;
 
+    d1 += index;
     if(d1 > daysOfMonth[m1])
     {
         d1 -= daysOfMonth[m1];
