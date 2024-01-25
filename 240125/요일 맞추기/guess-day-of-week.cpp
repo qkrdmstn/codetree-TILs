@@ -14,14 +14,14 @@ int main() {
     {
         for(int i=m1; i<m2; i++)
             days += day_of_month[i];
+        days += d2 - d1;
     }
     else
     {
         for(int i=m2; i<m1; i++)
             days += day_of_month[i];
+        days += d1 - d2;
     }
-    
-    days += d2 - d1;
     
     if(days % 7 < 0)
         days = 7 + (days%7);
