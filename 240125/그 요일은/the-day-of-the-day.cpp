@@ -13,7 +13,6 @@ int main() {
     cin >> m1 >> d1 >> m2 >> d2;
     cin >> A;
 
-    int index = 0;
     while(A != weeks[d1%7])
         d1++;
 
@@ -26,7 +25,7 @@ int main() {
     int days = 0;
     for(int i=m1; i<m2; i++)
         days += daysOfMonth[i];
-    days += d2 - (d1 + index);
+    days += d2 - d1;
 
     cout << days / 7 + 1;
     return 0;
