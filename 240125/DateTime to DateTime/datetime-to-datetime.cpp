@@ -6,25 +6,16 @@ int main() {
     int a, b, c;
     cin >> a >> b >> c;
 
-    if(a <= 11)
-    {
-        if(b <= 11)
-        {
-            if(c < 11)
-            {
-                cout << -1;
-                return 0;
-            }
-        }
-
-    }
-
     int d = a-11;
     int h = d*24 + (b-11);
     int m = h*60 + (c-11);
 
+    if(m<0)
+    {
+        cout << -1;
+        return 0;
+    }
+    
     cout << m;
-
- 
     return 0;
 }
