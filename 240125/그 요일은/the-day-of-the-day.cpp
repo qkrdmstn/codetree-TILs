@@ -24,7 +24,7 @@ int main() {
         index++;
     }
 
-    days += index;
-    cout << days / 7;
+    days -= index;
+    cout << days / 7 + 1;
     return 0;
 }
