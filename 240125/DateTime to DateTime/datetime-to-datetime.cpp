@@ -6,10 +6,17 @@ int main() {
     int a, b, c;
     cin >> a >> b >> c;
 
-    if(a < 11 || b < 11 || c < 11)
+    if(a <= 11)
     {
-        cout << -1;
-        return 0;
+        if(b <= 11)
+        {
+            if(c < 11)
+            {
+                cout << -1;
+                return 0;
+            }
+        }
+
     }
 
     int d = a-11;
