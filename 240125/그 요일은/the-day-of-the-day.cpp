@@ -11,15 +11,19 @@ int main() {
 
     cin >> m1 >> d1 >> m2 >> d2;
     cin >> A;
+    if(d1 == d2 && m1 == m2)
+    {
+        cout << 0;
+        return 0;
+    }
 
     int index = 0;
     while(A != weeks[index])
         index++;
 
     d1 += index;
-    if(d1 > d2)
-        d1 = 0;
-        
+ 
+
     if(d1 > daysOfMonth[m1])
     {
         d1 -= daysOfMonth[m1];
