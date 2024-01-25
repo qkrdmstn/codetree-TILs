@@ -3,7 +3,6 @@
 using namespace std;
 
 int main() {
-    int cnt = 0;
     string weeks[7] = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
     int daysOfMonth[13] = {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
@@ -18,6 +17,9 @@ int main() {
         index++;
 
     d1 += index;
+    if(d1 > d2)
+        d1 = 0;
+        
     if(d1 > daysOfMonth[m1])
     {
         d1 -= daysOfMonth[m1];
