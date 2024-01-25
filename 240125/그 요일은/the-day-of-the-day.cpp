@@ -15,8 +15,12 @@ int main() {
 
     int index = 0;
     while(A != weeks[index])
-    {
         index++;
+
+    if(d1 > daysOfMonth[m1])
+    {
+        d1 -= daysOfMonth[m1];
+        m1++;
     }
 
     int days = 0;
