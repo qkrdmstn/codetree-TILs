@@ -12,6 +12,6 @@ int main() {
 
     days += d2-d1;
 
-    cout << days;
+    cout << days + 1;
     return 0;
 }
