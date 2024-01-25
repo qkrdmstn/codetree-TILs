@@ -23,7 +23,7 @@ int main() {
         days -= d1 - d2;
     }
 
-    if(days % 7 < 0)
+    if(days % 7 <= 0)
         days = 7 + (days%7);
 
     cout << week[days % 7];
