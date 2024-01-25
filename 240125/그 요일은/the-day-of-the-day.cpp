@@ -11,26 +11,25 @@ int main() {
 
     cin >> m1 >> d1 >> m2 >> d2;
     cin >> A;
-    if(d1 == d2 && m1 == m2)
+    if(d1 == d2 && m1 == m2) //날짜가 같으면 return
     {
         cout << 0;
         return 0;
     }
 
-    int index = 0;
+    int index = 0; //A와 동일한 날짜로 이동
     while(A != weeks[index])
         index++;
 
     d1 += index;
  
-
     if(d1 > daysOfMonth[m1])
     {
         d1 -= daysOfMonth[m1];
         m1++;
     }
 
-    int days = 0;
+    int days = 0; //m2, d2 날짜까지 day count
     for(int i=m1; i<m2; i++)
         days += daysOfMonth[i];
     days += d2 - d1;
