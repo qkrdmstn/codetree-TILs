@@ -16,7 +16,6 @@ int main() {
         }
         a[i++] = N%B;
         N /= B;
-
     }
 
     for(int j=i-1; j>=0; j--)
