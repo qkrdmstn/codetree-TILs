@@ -33,7 +33,6 @@ int main() {
         decimal /= b;
     }
 
-
     for(int j=i - 1; j>=0; j--)
         cout << Bnum[j];
     return 0;
