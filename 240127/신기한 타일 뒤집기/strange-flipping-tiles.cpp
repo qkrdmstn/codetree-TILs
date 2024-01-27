@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     int n;
     int curPoint = MAXSIZE/2;
-    char color[MAXSIZE];
+    char color[MAXSIZE] = {'0'};
 
     cin >> n;
     for(int i=0; i<n; i++)
@@ -36,11 +36,17 @@ int main() {
     for(int i=0; i<MAXSIZE; i++)
     {
         if(color[i] == 'W')
+        {
             white++;
+            //cout << i << " " <<color[i] << endl;
+        }
         else if(color[i] == 'B')
+        {
             black++;
+            //cout << i << " " <<color[i] << endl;
+        }
     }
 
-    cout << white - 1 << " " << black - 1;
+    cout << white << " " << black;
     return 0;
 }
