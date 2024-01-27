@@ -13,7 +13,7 @@ int main() {
     {
         cin >> A >> B;
         for(int j=A; j<=B; j++)
-            arr[j] = 1;
+            arr[j] += 1;
     }
 
     //max 찾기
