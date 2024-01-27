@@ -4,11 +4,12 @@ using namespace std;
 int main() {
     //변수 선언
     int arr[100] = {0}; 
+    int N;
     int A, B;
     int K;
 
     //입력
-    cin >> K; 
+    cin >> N >> K; 
     for(int i=0; i<K; i++)
     {
         cin >> A >> B;
@@ -18,7 +19,7 @@ int main() {
 
     //max 찾기
     int max = 0;
-    for(int i=0; i<100; i++)
+    for(int i=0; i<N; i++)
     {
         if(max < arr[i])
             max = arr[i];
