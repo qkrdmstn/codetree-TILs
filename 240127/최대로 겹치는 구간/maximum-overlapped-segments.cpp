@@ -28,6 +28,6 @@ int main() {
     }
 
     //출력
-    //cout << max;
+    cout << max;
     return 0;
 }
