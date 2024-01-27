@@ -7,7 +7,7 @@ int main() {
     int curPoint = MAXSIZE/2;
     int blackCnt[MAXSIZE] = {0};
     int whiteCnt[MAXSIZE] = {0};
-    char arr[MAXSIZE] = {0};
+    char color[MAXSIZE] = {0};
 
     cin >> n;
     for(int i=0; i<n; i++)
@@ -15,23 +15,27 @@ int main() {
         int dist;
         char dir;
         cin >> dist >> dir;
-
+        
         if(dir == 'L')
         {
             dist *= -1;
-            for(int j= curPoint + dist; j<curPoint; j++)
+
+            for(int j=curPoint; j>curPoint + dist; j--)
             {
                 whiteCnt[j]++;
-                arr[j] = 'W';
+                color[j] = 'W';
             }
+            dist += 1;
         }
         else
         {
+
             for(int j=curPoint; j<curPoint+dist; j++)
             {
                 blackCnt[j]++;
-                arr[j] = 'B';
+                color[j] = 'B';
             }
+            dist -= 1;
         }
         curPoint += dist;
     }
@@ -43,9 +47,9 @@ int main() {
     {
         if(blackCnt[i] >= 2 && whiteCnt[i] >= 2)
             gray++;
-        else if(arr[i] == 'W')
+        else if(color[i] == 'W')
             white++;
-        else if(arr[i] == 'B')
+        else if(color[i] == 'B')
             black++;
     }
 
