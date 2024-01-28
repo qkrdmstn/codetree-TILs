@@ -26,7 +26,7 @@ int main() {
         {
             for(int k=y1[i]; k<y2[i]; k++)
             {
-                a[j][k] = i+1;
+                arr[j][k] = i+1;
             }
         }
     }
