@@ -13,6 +13,12 @@ int main() {
         int x1, x2, y1, y2;
         cin >> x1 >> y1 >> x2 >> y2;
 
+        //offset
+        x1+=100;
+        x2+=100;
+        y1+=100;
+        y2+=100;
+        
         for(int j=x1; j<x2; j++)
         {
             for(int k=y1; k<y2; k++)
