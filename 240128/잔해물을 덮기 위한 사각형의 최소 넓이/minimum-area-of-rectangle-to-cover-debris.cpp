@@ -30,8 +30,8 @@ int main() {
     }
 
     // 잔해물의 남은 min,max 좌표 계산
-    int minX = x1[0], maxX = x2[0];
-    int minY = y1[0], maxY = y2[0];
+    int minX = 2000, maxX = 0;
+    int minY = 2000, maxY = 0;
     for(int i=x1[0]; i<x2[0]; i++)
     {
         for(int j=y1[0]; j<y2[0]; j++)
@@ -50,7 +50,8 @@ int main() {
         }
     }
 
+
     //넓이 출력
-    cout << (maxX - minX)*(maxY - minY);
+    cout << (maxX - minX + 1)*(maxY - minY + 1);
     return 0;
 }
