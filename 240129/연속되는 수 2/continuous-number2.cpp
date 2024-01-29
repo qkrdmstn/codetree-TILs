@@ -18,6 +18,8 @@ int main() {
             if(max < cnt)
                 max = cnt;
         }
+        else
+            cnt = 1;
     }
 
     cout << max;
