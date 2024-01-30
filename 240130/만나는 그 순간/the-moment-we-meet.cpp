@@ -3,8 +3,8 @@ using namespace std;
 
 int main() {
     int n, m;
-    int a[2000] = {0};
-    int b[2000] = {0};
+    int a[1000000] = {0};
+    int b[1000000] = {0};
     int timeA = 1;
     int timeB = 1;
 
