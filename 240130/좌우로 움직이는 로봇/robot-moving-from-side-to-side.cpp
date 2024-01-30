@@ -4,8 +4,8 @@ using namespace std;
 int main() {
     //변수 선언
     int n, m;
-    int a[1000000] = {0};
-    int b[1000000] = {0};
+    int a[1000001] = {0};
+    int b[1000001] = {0};
     int timeA = 1, timeB = 1;
 
     //로봇A 움직임
