@@ -16,7 +16,7 @@ int main() {
         int t;
         cin >> t >> dir;
 
-        for(int j=timeA; j<=timeA+t; j++)
+        for(int j=timeA; j<timeA+t; j++)
         {
             if(dir == 'R')
                 a[j] = a[j-1] + 1;
@@ -33,7 +33,7 @@ int main() {
         int t;
         cin >> t >> dir;
 
-        for(int j=timeB; j<=timeB+t; j++)
+        for(int j=timeB; j<timeB+t; j++)
         {
             if(dir == 'R')
                 b[j] = b[j-1] + 1;
