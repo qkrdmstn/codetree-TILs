@@ -43,8 +43,12 @@ int main() {
         if(!infection[x] && !infection[y]) //비감염자끼리의 악수 skip
             continue;
 
-
-        if(infection[x]) //x가 감염
+        if(infection[x] && infection[y])
+        {
+            handCount[x]++;
+            handCount[y]++;
+        }
+        else if(infection[x]) //x가 감염
         {
             handCount[x]++;     //x의 악수 횟수 증가
             
@@ -52,7 +56,6 @@ int main() {
                 continue;
             else
             {
-                //handCount[y]++;
                 infection[y] = true; //악수 상대 감염
             }
         }
@@ -63,14 +66,18 @@ int main() {
                 continue;
             else
             {
-                //handCount[x]++;
+
                 infection[x] = true; //악수 상대 감염
             }
         }
+
     }
 
-    for(int i=1; i<=N; i++)
-        cout << infection[i];
+    for(int j=1; j<=N; j++)
+    {
+        cout << infection[j];
+    }
+
 
     return 0;
 }
