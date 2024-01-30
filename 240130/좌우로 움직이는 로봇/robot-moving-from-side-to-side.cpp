@@ -54,7 +54,7 @@ int main() {
     else if(timeA > timeB)
     {
         max = timeA;
-        for(int i=timeB; i<= timeA; i++)
+        for(int i=timeB; i<=timeA; i++)
             b[i] = b[i-1];
     }
 
