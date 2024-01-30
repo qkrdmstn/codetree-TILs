@@ -52,7 +52,7 @@ int main() {
                 continue;
             else
             {
-                handCount[y]++;
+                //handCount[y]++;
                 infection[y] = true; //악수 상대 감염
             }
         }
@@ -63,7 +63,7 @@ int main() {
                 continue;
             else
             {
-                handCount[x]++;
+                //handCount[x]++;
                 infection[x] = true; //악수 상대 감염
             }
         }
