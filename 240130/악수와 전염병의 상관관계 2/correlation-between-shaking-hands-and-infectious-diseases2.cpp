@@ -45,12 +45,15 @@ int main() {
 
         if(infection[x]) //x가 감염
         {
-            handCount[x]++;     //x의 악수 횟수 증가
-            handCount[y]++;
+
             if(handCount[x]>K) //k번 보다 더 악수한 상태
                 continue;
             else
+            {
+                handCount[x]++;     //x의 악수 횟수 증가
+                handCount[y]++;
                 infection[y] = true; //악수 상대 감염
+            }
         }
         else if(infection[y])
         {
@@ -59,7 +62,11 @@ int main() {
             if(handCount[y]>K)
                 continue;
             else
-                infection[x] = true;
+            {
+                handCount[x]++;     //x의 악수 횟수 증가
+                handCount[y]++;
+                infection[x] = true; //악수 상대 감염
+            }
         }
     }
 
