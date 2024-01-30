@@ -14,7 +14,7 @@ int main() {
         int t;
         cin >> v >> t;
 
-        for(int j=timeA; j<timeA+t; j++)
+        for(int j=timeA; j<=timeA+t; j++)
         {
             a[j] = a[j-1] + v;
         }
@@ -27,7 +27,7 @@ int main() {
         int t;
         cin >> v >> t;
 
-        for(int j=timeB; j<timeB+t; j++)
+        for(int j=timeB; j<=timeB+t; j++)
         {
             b[j] = b[j-1] + v;
         }
