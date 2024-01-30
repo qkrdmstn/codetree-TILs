@@ -63,8 +63,7 @@ int main() {
                 continue;
             else
             {
-                handCount[x]++;     //x의 악수 횟수 증가
-                handCount[y]++;     //y의 악수 횟수 증가
+
                 infection[x] = true; //악수 상대 감염
             }
         }
