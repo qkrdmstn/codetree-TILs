@@ -43,7 +43,7 @@ int main() {
         if(!infection[x] && !infection[y]) //비감염자끼리의 악수 skip
             continue;
 
-        if(infection[x] && infection[y])
+        if(infection[x] && infection[y]) //둘 다 감염자
         {
             handCount[x]++;
             handCount[y]++;
@@ -55,9 +55,7 @@ int main() {
             if(handCount[x]>K) //k번 보다 더 악수한 상태
                 continue;
             else
-            {
                 infection[y] = true; //악수 상대 감염
-            }
         }
         else if(infection[y])
         {
@@ -65,19 +63,13 @@ int main() {
             if(handCount[y]>K)
                 continue;
             else
-            {
-
                 infection[x] = true; //악수 상대 감염
-            }
         }
 
     }
 
+    //감염자 출력
     for(int j=1; j<=N; j++)
-    {
         cout << infection[j];
-    }
-
-
     return 0;
 }
