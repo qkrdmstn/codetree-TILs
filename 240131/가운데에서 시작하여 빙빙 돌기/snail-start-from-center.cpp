@@ -15,36 +15,35 @@ int main() {
     int dir = 0;
 
     cin >> n;
+    
+    //시작점 setting
     int r = n/2 + 1, c = n/2 + 1;
-
     arr[r][c] = 1;
-
     int cnt = 2;
-    int num = 1;
-    for(int k=0; k<n; k++)
+
+    int num = 1; //직선 이동 횟수
+    while(InRange(r, c))
     {
         for(int i=0; i<2; i++)
         {
             for(int j=0; j<num; j++)
             {
-                if(cnt > n*n)
-                    break;
-                int nr = r + dr[dir];
-                int nc = c + dc[dir];
-
                 r += dr[dir];
                 c += dc[dir];
 
+                if(!InRange(r, c))
+                    break;
+                
                 arr[r][c] = cnt;
                 cnt++;
-
             }
-            dir++;
+            dir++; //한 번의 직선 이동이 끝나면 방향 전환
             dir %= 4;
         }
-        num++;
+        num++; //방향 전환이 두 번 될 때마다 직선 이동 거리 증가.
     }
 
+    //출력
     for(int i=1; i<=n; i++)
     {
         for(int j=1; j<=n; j++)
