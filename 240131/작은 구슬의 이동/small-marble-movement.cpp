@@ -35,7 +35,7 @@ int main() {
         {
             dir += 2;
             dir %= 4;
-            i++;
+            continue;
         }
         c = c + dx[dir];
         r = r + dy[dir];
