@@ -1,9 +1,13 @@
 #include <iostream>
 using namespace std;
 
+int n, t;
+bool InRange(int x, int y)
+{
+    return (x >= 1 && x <= n && y >= 1 && y <= n);
+}
 
 int main() {
-    int n, t;
     int dx[4] = {0, 1, 0, -1};
     int dy[4] = {1, 0, -1, 0};
     int r = 0, c = 0;
@@ -24,17 +28,17 @@ int main() {
 
     for(int i=0; i<t; i++)
     {
-        c += dx[dir];
-        r += dy[dir];
+        int nc = c + dx[dir];
+        int nr = r + dy[dir];
 
-        if(c < 1 || c > n || r < 1 || r > n)
+        if(!InRange(nc, nr))
         {
-            c -= dx[dir];
-            r -= dy[dir];
-
             dir += 2;
             dir %= 4;
+            i++;
         }
+        c = c + dx[dir];
+        r = r + dy[dir];
         
         //cout << i << " " << r << " " << c << endl;
     }
