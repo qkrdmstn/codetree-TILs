@@ -27,23 +27,22 @@ int main() {
         {
             for(int j=0; j<num; j++)
             {
+                if(cnt > n*n)
+                    break;
                 int nr = r + dr[dir];
                 int nc = c + dc[dir];
 
-        
                 r += dr[dir];
                 c += dc[dir];
 
                 arr[r][c] = cnt;
-                //cout << r << " " << c << " " << cnt << endl;
                 cnt++;
+
             }
             dir++;
             dir %= 4;
         }
         num++;
-
-
     }
 
     for(int i=1; i<=n; i++)
