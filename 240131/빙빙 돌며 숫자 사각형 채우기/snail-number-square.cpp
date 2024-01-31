@@ -13,6 +13,7 @@ int main() {
 
     int dr[4] = {-1, 0, 1, 0};
     int dc[4] = {0, 1, 0, -1};
+    
     int dir = 1;
     int cnt = 2;
     int r = 0, c = 0;
