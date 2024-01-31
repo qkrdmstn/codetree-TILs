@@ -42,7 +42,7 @@ int main() {
         cnt++;
         visit[r][c] = true;
 
-        if(cnt > 26) //Z 다음은 A
+        if(cnt > 25) //Z 다음은 A
             cnt = 0;
     }
 
