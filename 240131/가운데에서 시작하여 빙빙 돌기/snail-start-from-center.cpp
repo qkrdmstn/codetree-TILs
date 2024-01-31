@@ -9,33 +9,41 @@ bool InRange(int r, int c)
 
 int main() {
     int arr[101][101] = {0};
-    bool visit[101][101] = {false};
 
     int dr[4] = {0, -1, 0, 1};
-    int dc[4] = {-1, 0, 1, 0};
+    int dc[4] = {1, 0, -1, 0};
     int dir = 0;
 
     cin >> n;
-    int r = n, c = n;
+    int r = n/2 + 1, c = n/2 + 1;
 
-    arr[r][c] = n*n;
-    visit[r][c] = true;
+    arr[r][c] = 1;
 
-    int cnt = 1;
-    for(int i=0; i<n*n-1; i++)
+    int cnt = 2;
+    int num = 1;
+    for(int k=0; k<n; k++)
     {
-        int nr = r + dr[dir];
-        int nc = c + dc[dir];
+        for(int i=0; i<2; i++)
+        {
+            for(int j=0; j<num; j++)
+            {
+                int nr = r + dr[dir];
+                int nc = c + dc[dir];
 
-        if(!InRange(nr, nc) || visit[nr][nc])
+        
+                r += dr[dir];
+                c += dc[dir];
+
+                arr[r][c] = cnt;
+                //cout << r << " " << c << " " << cnt << endl;
+                cnt++;
+            }
             dir++;
-        dir %= 4;
+            dir %= 4;
+        }
+        num++;
 
-        r += dr[dir];
-        c += dc[dir];
 
-        arr[r][c] = n*n - cnt;
-        cnt++;
     }
 
     for(int i=1; i<=n; i++)
