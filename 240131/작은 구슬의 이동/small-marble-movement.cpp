@@ -9,7 +9,7 @@ bool InRange(int x, int y)
 
 int main() {
     int dx[4] = {0, 1, 0, -1};
-    int dy[4] = {1, 0, -1, 0};
+    int dy[4] = {-1, 0, +1, 0};
     int r = 0, c = 0;
     char d;
 
@@ -39,8 +39,6 @@ int main() {
         }
         c = c + dx[dir];
         r = r + dy[dir];
-        
-        //cout << i << " " << r << " " << c << endl;
     }
 
     cout << r << " " << c;
