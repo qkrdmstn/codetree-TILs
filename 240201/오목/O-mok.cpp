@@ -22,26 +22,24 @@ int CheckVictory(int y, int x, int &cenY, int &cenX)
         int curX = x;
         int curY = y;
 
-        for(int j=0; j<4; j++) //dx, dy 방향으로 4번 이동
+        for(int j=0; j<5; j++) //dx, dy 방향으로 4번 이동
         {
-            int nx = x + dx[dir]; //범위 확인
-            int ny = y + dy[dir];
-            if(!InRange(nx, ny))
+            int nx = curX + dx[dir]; //범위 확인
+            int ny = curY + dy[dir];
+
+            if(!InRange(nx, ny) || grid[nx][ny] != color)
+            {
+                victory = false;
                 break;
-  
+            }
+
             curX += dx[dir]; //이동
             curY += dy[dir];
-
+      
             if(j==1) //중간점 저장
             {
                 cenX = curX;
                 cenY = curY;
-            }
-
-            if(grid[curY][curX] != color) //색이 다르면
-            {
-                victory = false;
-                break;
             }
         }
         if(victory)
