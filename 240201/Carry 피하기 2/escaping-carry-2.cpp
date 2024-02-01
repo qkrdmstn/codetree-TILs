@@ -14,6 +14,7 @@ bool isCarry(int a, int b, int c) //Carry 여부 판단
             return true;
         if(a/10 == 0 && b/10 == 0 && c/10 == 0)
             return false;
+
         a/=10;
         b/=10;
         c/=10;
@@ -24,7 +25,7 @@ int main() {
     //변수 선언
     int n;
     int num[20] = {0};
-    int max = 0;
+    int max = -1;
 
     //입력
     cin >> n;
@@ -56,7 +57,6 @@ int main() {
             }
         }
     }
-
 
     //출력
     cout << max;
