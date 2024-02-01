@@ -27,7 +27,7 @@ int CheckVictory(int y, int x, int &cenY, int &cenX)
             int nx = curX + dx[dir]; //범위 확인
             int ny = curY + dy[dir];
 
-            if(!InRange(nx, ny) || grid[nx][ny] != color)
+            if(!InRange(nx, ny) || grid[ny][nx] != color)
             {
                 victory = false;
                 break;
