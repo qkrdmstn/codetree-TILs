@@ -16,7 +16,10 @@ int main() {
         int sum = 0;
         for(int j=0; j<n; j++) //j만큼 반시계방향으로 이동한 방
         {
-            int curRoom = (i+j)%n + 1;
+            int curRoom = (i+j)%n;
+            if(!curRoom)
+                curRoom = n;
+                
             int dist = arr[curRoom] * j;
             sum += dist;
         }
