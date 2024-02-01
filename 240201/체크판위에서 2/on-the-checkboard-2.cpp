@@ -15,9 +15,9 @@ int main() {
             cin >> grid[i][j];
     }
 
-    for(int i=1; i<r; i++) //첫 번째 점프 지점 (i,j)
+    for(int i=2; i<r; i++) //첫 번째 점프 지점 (i,j)
     {
-        for(int j=1; j<c; j++)
+        for(int j=2; j<c; j++)
         {
             if(grid[1][1] == grid[i][j]) //출발지와 색이 달라야 함.
                 continue;
