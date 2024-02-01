@@ -22,7 +22,7 @@ int CheckVictory(int y, int x, int &cenY, int &cenX)
         int curX = x;
         int curY = y;
 
-        for(int j=0; j<5; j++) //dx, dy 방향으로 4번 이동
+        for(int j=0; j<4; j++) //dx, dy 방향으로 4번 이동
         {
             int nx = curX + dx[dir]; //범위 확인
             int ny = curY + dy[dir];
