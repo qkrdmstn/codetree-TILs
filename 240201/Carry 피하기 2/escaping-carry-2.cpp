@@ -36,11 +36,11 @@ int main() {
     {
         for(int j=0; j<n; j++)
         {
-            if(i==j)
+            if(j==i)
                 continue;
             for(int k=0; k<n; k++)
             {
-                if(j==k)
+                if(k==j || k==i)
                     continue;
 
                 int a = num[i];
@@ -55,7 +55,8 @@ int main() {
                 }
             }
         }
-    }    
+    }
+
 
     //출력
     cout << max;
