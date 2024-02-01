@@ -2,12 +2,14 @@
 using namespace std;
 
 int main() {
+    //변수 선언
     int r,c;
     char grid[16][16];
 
     int curR = 1, curC = 1;
     int cnt = 0;
 
+    //입력
     cin >> r >> c;
     for(int i=1; i<=r; i++)
     {
@@ -39,6 +41,7 @@ int main() {
         }
     }
 
+    //출력
     cout << cnt;
     return 0;
 }
