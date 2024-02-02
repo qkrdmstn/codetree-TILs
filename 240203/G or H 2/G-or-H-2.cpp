@@ -30,10 +30,6 @@ int main() {
 
     sort(people, people + n, Compare);
 
-    for(int i=0; i<n; i++)
-        cout << people[i].x << " " << people[i].c <<endl;
-    cout << endl;
-
     int maxSize = 0;
     for(int i=0; i<n; i++) //칸수 
     {
