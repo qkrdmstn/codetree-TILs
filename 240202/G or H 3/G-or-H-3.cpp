@@ -13,6 +13,14 @@ bool Compare(People a, People b)
     return a.x < b.x;
 }
 
+int Dist(People a, People b)
+{
+    int result = a.x - b.x;
+    if(result < 0)
+        result *= -1;
+    return result;
+}
+
 int main() {
     int n, k;
     People people[101];
@@ -26,25 +34,31 @@ int main() {
 
     sort(people, people + n, Compare);
 
-    for(int i=0; i<n; i++)
-    {
-        cout << people[i].x <<" ";
-        cout << people[i].c <<endl;
-    }
-
     int max = 0;
-    for(int i=0; i<n-k; i++)
+    int i=0;
+
+    while(true)
     {
+        int j=i;
         int sum = 0;
-        for(int j=i; j<i+k; j++)
+        int dist = 0;
+
+        while(dist <= k)
         {
             if(people[j].c == 'G')
                 sum += 1;
             else if(people[j].c == 'H')
                 sum += 2;
+
+            dist += Dist(people[j], people[j+1]);
+            j++;
         }
+        i++;
         if(sum > max)
             max = sum;
+
+        if(j >= n)
+            break;
     }
 
     cout << max;
