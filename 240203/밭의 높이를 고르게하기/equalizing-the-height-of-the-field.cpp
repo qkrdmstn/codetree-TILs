@@ -19,7 +19,7 @@ int main() {
         cin >> farm[i];
     
     int min = 20000;
-    for(int i=0; i<n-t; i++) //시작점 i
+    for(int i=0; i<=n-t; i++) //시작점 i
     {
         int cost = 0;
         for(int j=i; j<i+t; j++) //i부터 t개만큼 고르게 하기
