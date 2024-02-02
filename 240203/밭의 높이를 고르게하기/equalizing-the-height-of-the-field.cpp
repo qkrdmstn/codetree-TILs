@@ -23,13 +23,14 @@ int main() {
     {
         int cost = 0;
         for(int j=i; j<i+t; j++) //i부터 t개만큼 고르게 하기
-        {
             cost += Plowing(farm[j], h);
-        }
+
+        //최소값
         if(cost < min)
             min = cost;
     }
 
+    //출력
     cout << min;
     return 0;
 }
