@@ -12,17 +12,17 @@ int main() {
     int cnt = 0;
     for(int k=1; k<=n; k++) //구간의 크기 k
     {   
-        int sum = 0;
-        int aver = 0;
-        for(int i=0; i<n-k; i++)
+        for(int i=0; i<n-k; i++) //시작점 i
         {
-            for(int j=i; j<i+k; j++)
+            int sum = 0;
+            int aver = 0;
+            for(int j=i; j<i+k; j++) //i부터 k개 만큼 더하기
                 sum += arr[j];
-            aver = sum/k;
+            aver = sum/k; //평균
             
-            for(int j=i; j<i+k; j++)
+            for(int j=i; j<i+k; j++) //구간 탐색
             {
-                if(aver == arr[j])
+                if(arr[j] == aver)
                     cnt++;
             }
         }
