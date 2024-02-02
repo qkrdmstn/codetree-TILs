@@ -24,8 +24,11 @@ int main() {
             for(int j=i; j<i+k; j++) //구간 탐색
             {
                 if(arr[j] == aver)
+                {
                     cnt++;
                     break;
+                }
+
             }
         }
     }
