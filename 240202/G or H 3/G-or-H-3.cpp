@@ -2,18 +2,18 @@
 #include <algorithm>
 using namespace std;
 
-struct People
+struct People 
 {
-    int x = 0;
-    char c;
+    int x = 0; //위치
+    char c; //문자
 };
 
-bool Compare(People a, People b)
+bool Compare(People a, People b) //위치 기준 정렬
 {
     return a.x < b.x;
 }
 
-int Dist(People a, People b)
+int Dist(People a, People b) //거리 계산
 {
     int result = a.x - b.x;
     if(result < 0)
@@ -22,9 +22,11 @@ int Dist(People a, People b)
 }
 
 int main() {
+    //변수 선언
     int n, k;
     People people[101];
 
+    //입력
     cin >> n >> k;
     for(int i=0; i<n; i++)
     {
@@ -32,18 +34,17 @@ int main() {
         cin >> people[i].c;
     }
 
-    sort(people, people + n, Compare);
+    sort(people, people + n, Compare); //위치 오름차순 정렬
 
     int max = 0;
-    int i=0;
-
+    int i=0; //시작점
     while(true)
     {
         int j=i;
         int sum = 0;
         int dist = 0;
 
-        while(dist <= k)
+        while(dist <= k) //dist가 k보다 작은 동안
         {
             if(people[j].c == 'G')
                 sum += 1;
@@ -54,13 +55,14 @@ int main() {
             j++;
         }
         i++;
-        if(sum > max)
-            max = sum;
 
-        if(j >= n)
+        if(sum > max) //최댓값
+            max = sum;
+        if(j >= n) //j가 범위 밖 break;
             break;
     }
 
+    //출력
     cout << max;
     return 0;
 }
