@@ -12,7 +12,7 @@ int main() {
         cin >> arr[i];
     
     int max = 0;
-    for(int i=0; i<n-k; i++) //시작점 i
+    for(int i=0; i<=n-k; i++) //시작점 i
     {
         int sum = 0;
         for(int j=i; j<i+k; j++) //i부터 k개만큼 합
