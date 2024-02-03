@@ -38,11 +38,11 @@ int CalCnt2(int num[], int digit[]) //다른 자리 수에 같은 수가 있으�
     return cnt2;
 }
 
-bool Compare(int n100, int n10, int n1) //주어진 수가 정답이라 가정하고, cnt 계산
+bool Condition(int n100, int n10, int n1) 
 {
     int n[3] = {n1, n10, n100}; 
 
-    for(int i=0; i<N; i++)
+    for(int i=0; i<N; i++) //주어진 수가 모든 정보에 대해 부합하는지 확인
     {
         int num = info[i].num;
         int iCnt1 = info[i].cnt1;
