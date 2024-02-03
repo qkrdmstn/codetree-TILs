@@ -41,6 +41,6 @@ int main() {
     }
 
     //출력
-    cout << diff;
+    cout << min;
     return 0;
 }
