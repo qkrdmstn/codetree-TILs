@@ -18,22 +18,22 @@ int main() {
         totalSum += ability[i];
     }
 
-    for(int i=0; i<6; i++)
+    for(int i=0; i<6; i++) //팀1 (i, j)
     {
         for(int j=0; j<6; j++)
         {
-            for(int k=0; k<6; k++)
+            for(int k=0; k<6; k++) //팀2 (k, l)
             {
                 for(int l=0; l<6; l++)
                 {
-                    if(isDuplicate(i, j, k, l)) continue;
+                    if(isDuplicate(i, j, k, l)) continue; //팀원 중복 확인
                     int sum1 = ability[i] + ability[j];
                     int sum2 = ability[k] + ability[l];
                     int sum3 = totalSum - (sum1 + sum2);
 
                     int minSum = min(sum1, min(sum2, sum3));
                     int maxSum = max(sum1, max(sum2, sum3));
-                    int diff = maxSum - minSum;
+                    int diff = maxSum - minSum; 
                     
                     if(diff < minDiff)
                         minDiff = diff;
@@ -42,6 +42,7 @@ int main() {
         }
     }
 
+    //출력
     cout << minDiff;
     return 0;
 }
