@@ -23,9 +23,9 @@ int main() {
     }
 
     //1팀 조합 i, j, k
-    for(int i=0; i<6; i++)
+    for(int i=0; i<4; i++)
     {
-        for(int j=i+1; j<6; j++)
+        for(int j=i+1; j<5; j++)
         {
             int sum1 = 0;
             int sum2 = 0;
