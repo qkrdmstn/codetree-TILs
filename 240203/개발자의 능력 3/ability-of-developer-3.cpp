@@ -10,10 +10,12 @@ int GetDiff(int a, int b)
 }
 
 int main() {
+    //변수 선언
     int ability[6] = {0};
     int totalSum = 0;
     int min = 1000000;
-
+    
+    //입력
     for(int i=0; i<6; i++)
     {
         cin >> ability[i];
