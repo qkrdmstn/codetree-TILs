@@ -32,8 +32,8 @@ int main() {
                 int sum2 = ability[k];
                 int sum3 = totalSum - (sum1 + sum2);
 
-                if(isDuplicate(sum1, sum2, sum3)) continue;
-                
+                if(isDuplicate(sum1, sum2, sum3)) continue; //능력치 중복 확인
+
                 int minSum = min(sum1, min(sum2, sum3));
                 int maxSum = max(sum1, max(sum2, sum3));
                 int diff = maxSum - minSum;
