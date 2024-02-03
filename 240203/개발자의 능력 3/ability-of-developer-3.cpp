@@ -29,12 +29,13 @@ int main() {
         {
             int sum1 = 0;
             int sum2 = 0;
+            int diff = 0;
             for(int k=j+1; k<6; k++)
             {
                 sum1 = ability[i] + ability[j] + ability[k]; //1팀 능력치
                 sum2 = totalSum - sum1; //2팀 능력치 
+                diff = GetDiff(sum1, sum2);
             }
-            int diff = GetDiff(sum1, sum2);
             if(diff < min)
                 min = diff;
         }
