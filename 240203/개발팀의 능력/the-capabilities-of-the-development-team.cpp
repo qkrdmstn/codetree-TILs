@@ -12,6 +12,7 @@ int main() {
     int ability[5];
     int totalSum = 0;
     int minDiff = 1000000;
+    bool flag = false;
 
     //입력
     for(int i=0; i<5; i++)
@@ -39,12 +40,18 @@ int main() {
                 int diff = maxSum - minSum;
 
                 if(diff < minDiff)
+                {
                     minDiff = diff;
+                    flag = true;
+                }
             }
         }
     }
 
     //출력
-    cout << minDiff;
+    if(flag)
+        cout << minDiff;
+    else
+        cout << -1;
     return 0;
 }
