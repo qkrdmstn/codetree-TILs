@@ -35,7 +35,7 @@ int main() {
                 sum2 = totalSum - sum1; //2팀 능력치 
             }
             int diff = GetDiff(sum1, sum2);
-            if(min < diff)
+            if(min > diff)
                 min = diff;
         }
     }
