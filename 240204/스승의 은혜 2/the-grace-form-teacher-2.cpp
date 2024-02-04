@@ -24,9 +24,10 @@ int main() {
             b += price[i]/2;
             flag = false;
         }
-        i++;
-        if(!flag)
+        if(!flag && b <= 0)
             break;
+        i++;
+
     }
 
     cout << i;
