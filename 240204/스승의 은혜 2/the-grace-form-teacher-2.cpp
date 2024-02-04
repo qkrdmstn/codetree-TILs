@@ -12,6 +12,8 @@ int main() {
 
     sort(price, price + n);
 
+
+
     int i=0;
     bool flag = true;
     while(b > 0)
@@ -23,8 +25,10 @@ int main() {
             flag = false;
         }
         i++;
+        if(!flag)
+            break;
     }
 
-    cout << i-1;
+    cout << i;
     return 0;
 }
