@@ -19,7 +19,7 @@ int main() {
     while(b > 0)
     {
         b -= price[i];
-        if(b <= 0 && flag)
+        if(b < 0 && flag)
         {
             b += price[i]/2;
             flag = false;
