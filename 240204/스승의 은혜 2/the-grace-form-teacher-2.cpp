@@ -19,13 +19,13 @@ int main() {
     while(b > 0)
     {
         b -= price[i];
-        if(b < 0 && flag)
+        if(b < 0 && flag) //예산 초과일 때, 해당 선물에 반값 사용
         {
             b += price[i]/2;
             flag = false;
         }
         
-        if(b >= 0)
+        if(b >= 0) //선물을 산 뒤에 돈이 양수여야 구입 성공
             i++;
         else
             break;
