@@ -66,11 +66,19 @@ int main() {
                 int cnt = 0;
                 if(EatCheese(rotCheese)) //다른 모든 아픈 사람이 상한 가능성 치즈를 먹었을 경우,
                 {
-                    for(int i=0; i<D; i++)
+                    bool people[51] = {false};
+                    for(int k=0; k<D; k++) //해당 치즈를 먹은 사람 표시
                     {
-                        if(eat[i].cheeseIdx == rotCheese)
+                        if(eat[k].cheeseIdx == rotCheese)
+                            people[eat[k].people] = true;
+                    }
+
+                    for(int k=0; k<=N; k++) //해당 치즈를 먹은 사람 count
+                    {
+                        if(people[k])
                             cnt++;
                     }
+
                     if(maxCnt < cnt) //최대값
                         maxCnt = cnt;
                 }
