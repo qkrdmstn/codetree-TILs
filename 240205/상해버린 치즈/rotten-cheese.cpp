@@ -14,7 +14,7 @@ struct Sick
 };
 
 int N, M, D, S;
-Eat eat[50];
+Eat eat[1000];
 Sick sick[50];
 
 bool EatCheese(int idx)
