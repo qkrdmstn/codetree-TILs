@@ -58,6 +58,6 @@ int main() {
             i++;
     }
 
-    cout << i + 1;
+    cout << i;
     return 0;
 }
