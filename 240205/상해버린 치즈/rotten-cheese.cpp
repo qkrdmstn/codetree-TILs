@@ -62,9 +62,6 @@ int main() {
     for(int i=0; i<S; i++) //배가 아픈 기록
         cin >> sick[i].people >> sick[i].time;
 
-    sort(eat, eat + D, CompareE);
-    sort(sick, sick + S, CompareS);
-
     //아픈 사람이 먹은 치즈를 찾기
     for(int i=0; i<S; i++)
     {
