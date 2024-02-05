@@ -23,9 +23,15 @@ int main() {
                 num = arr[i];
         }
         if(num > maxNum)
+        {
             maxNum = num;
+            flag = true;
+        }
     }
     
-    cout << maxNum;
+    if(flag)
+        cout << maxNum;
+    else
+        cout << -1;
     return 0;
 }
