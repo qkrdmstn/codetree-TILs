@@ -23,6 +23,7 @@ bool alwaysVictory(int a, int b) //모든 경기에서 a가 b를 이겼느냐.
 
 }
 int main() {
+    //입력
     cin >> K >> N;
     for(int i=0; i<K; i++)
     {
@@ -35,7 +36,7 @@ int main() {
     {
         for(int b=1; b<=N; b++) //b번 개발자
         {
-            if(a==b) continue;
+            if(a==b) continue; //자신 제외
 
             if(alwaysVictory(a,b)) //a가 b한테 항상 승리
             {
