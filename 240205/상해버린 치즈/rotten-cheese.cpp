@@ -1,5 +1,4 @@
 #include <iostream>
-#include <algorithm>
 using namespace std;
 
 struct Eat{
@@ -17,19 +16,10 @@ struct Sick
 int N, M, D, S;
 Eat eat[50];
 Sick sick[50];
-bool CompareE(Eat a, Eat b)
-{
-    return a.time < b.time;
-}
-
-bool CompareS(Sick a, Sick b)
-{
-    return a.time < b.time;
-}
 
 bool EatCheese(int idx)
 { //상한 치즈를 모든 아픈 사람이 아프기 전에 먹어야 함.
-//-> 아픈 사람이 아프기 전에 안 먹었으면 false;
+  //-> 아픈 사람이 아프기 전에 안 먹었으면 false;
 
     bool isEveryone = true;
     for(int i=0; i<S; i++)
@@ -48,7 +38,6 @@ bool EatCheese(int idx)
         if(!isEat) //안 먹음
             isEveryone = false; //모든 아픈 사람이 먹지 않음
     }
-
     return isEveryone; //아픈 사람이 먹은 적 없거나, 아프고 난 뒤에 먹음
 }
 
@@ -89,7 +78,7 @@ int main() {
         }
     }
 
+    //출력
     cout << maxCnt;
-
     return 0;
 }
