@@ -4,10 +4,10 @@ using namespace std;
 
 struct Student
 {
+    int num;
     int present = 0;
     int delivCost = 0;
     int sum;
-    bool buy = false;
 };
 
 bool Compare(Student a, Student b)
@@ -23,14 +23,17 @@ int main() {
     //입력
     cin >> N >> B;
     for(int i=0; i<N; i++)
+    {
         cin >> students[i].present >> students[i].delivCost;
+        students[i].num = i;
+    }
 
     int maxCnt = 0;
-    for(int i=0; i<N; i++) //할인 받을 학생
+    for(int i=0; i<N; i++) //할인 받을 학생 번호
     {
         for(int j=0; j<N; j++)
         {
-            if(j==i)
+            if(students[j].num == i)
                 students[j].sum = students[j].present/2 + students[j].delivCost; //할인
             else
                 students[j].sum = students[j].present + students[j].delivCost;                
