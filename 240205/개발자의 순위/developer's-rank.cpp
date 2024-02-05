@@ -2,7 +2,7 @@
 using namespace std;
 
 int K, N;
-int rankInfo[10][20];
+int rankInfo[10][21];
 bool alwaysVictory(int a, int b) //모든 경기에서 a가 b를 이겼느냐.
 {
     for(int i=0; i<K; i++)
@@ -31,12 +31,16 @@ int main() {
     }
 
     int cnt = 0;
-    for(int a=0; a<N; a++) //a번 개발자
+    for(int a=1; a<=N; a++) //a번 개발자
     {
-        for(int b=0; b<N; b++) //b번 개발자
+        for(int b=1; b<=N; b++) //b번 개발자
         {
-            if(alwaysVictory(a,b))
+            if(a==b) continue;
+
+            if(alwaysVictory(a,b)) //a가 b한테 항상 승리
+            {
                 cnt++;
+            }
         }
     }
 
