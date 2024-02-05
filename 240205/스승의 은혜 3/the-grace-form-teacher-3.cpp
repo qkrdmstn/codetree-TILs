@@ -31,28 +31,30 @@ int main() {
     int maxCnt = 0;
     for(int i=0; i<N; i++) //할인 받을 학생 번호
     {
+        int cost = B;
         for(int j=0; j<N; j++)
         {
             if(students[j].num == i)
                 students[j].sum = students[j].present/2 + students[j].delivCost; //할인
             else
-                students[j].sum = students[j].present + students[j].delivCost;                
+                students[j].sum = students[j].present + students[j].delivCost;                   
         }
 
         sort(students, students + N, Compare); //배송비 + 선물 가격 합계로 오름차순 정렬
 
         int k=0;
-        while(B >= 0)
+        while(cost > 0)
         {
-            B -= students[k].sum;
-            if(B >= 0) //구매 성공
+            cost -= students[k].sum; //구매
+            if(cost >= 0) //구매 성공
                 k++;
         }
-
-        if(k > maxCnt)
+        
+        if(k > maxCnt) //최대값
             maxCnt = k;
     }
 
+    //출력
     cout << maxCnt;
     return 0;
 }
