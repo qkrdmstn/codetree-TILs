@@ -12,7 +12,7 @@ Segment seg[10];
 
 void DeleteSegment(int idx1, int idx2, int idx3)
 {
-    for(int i=0; i<=100; i++)
+    for(int i=0; i<=100; i++) //수직선 초기화
         line[i] = 0;
     for(int i=0; i<n; i++)
     {
@@ -26,7 +26,7 @@ bool isOverlap()
 {
     for(int i=0; i<=100; i++)
     {
-        if(line[i] > 1)
+        if(line[i] > 1) //수직선의 count가 1보다 크면 겹침
             return true;
     }
     return false;
@@ -46,9 +46,8 @@ int main() {
             for(int k=j+1; k<n; k++) //3개의 선분 i, j, k
             {
                 DeleteSegment(i, j, k); //세 개의 선분 빼고 그리기
-                if(!isOverlap())
+                if(!isOverlap()) //안겹치면
                     cnt++;
-
             }
         }
     }
