@@ -25,7 +25,7 @@ int main() {
                 int a = arr[k];
                 int b = arr[k+1];
 
-                if(k==j) a = arr[k-1];
+                if(k==j) a = arr[k-1]; //j 건너뜀
                 if(k+1 == j) continue;
 
                 if(k == i) a*=2; //i 2배
