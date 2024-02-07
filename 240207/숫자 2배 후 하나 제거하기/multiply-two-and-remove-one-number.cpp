@@ -22,10 +22,12 @@ int main() {
         for(int j=0; j<n; j++){ //제거 숫자 index
             int sum = 0;
             for(int k=0; k<n-1; k++){ //인접 숫자 차이 합 계산
-                if(k==j) continue; //j 제외
-
                 int a = arr[k];
                 int b = arr[k+1];
+
+                if(k==j) a = arr[k-1];
+                if(k+1 == j) continue;
+
                 if(k == i) a*=2; //i 2배
                 if(k+1 == i) b*=2;
 
