@@ -9,8 +9,8 @@ int main() {
     int j = c/b;
 
     int maxSum = 0;
-    for(int k=0; k<i; k++){
-        for(int l=0; l<j; l++){
+    for(int k=0; k<=i; k++){
+        for(int l=0; l<=j; l++){
             int sum = a*k + b*l;
             if(sum > c) continue;
 
