@@ -36,7 +36,8 @@ int main() {
                 minMaxCnt = maxCnt;
         }
     }
-
+    
+    //출력
     cout << minMaxCnt;
     return 0;
 }
