@@ -32,6 +32,7 @@ int main() {
     //최소거리 계산
     int maxDist = 0;
     for(int i=0; i<n; i++){
+        string str = arr;
         if(arr[i] == '1')   continue;
         arr[i] = '1';
         
