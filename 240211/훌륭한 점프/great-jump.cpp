@@ -27,16 +27,21 @@ int main() {
 
     //입력
     cin >> n >> k;
-    for(int i=0; i<n; i++)
+    int maxArr = 0;
+    for(int i=0; i<n; i++){
         cin >> arr[i];
+        if(arr[i] > maxArr)
+            maxArr = arr[i];
+    }
 
-    int minimax = 0;
-    for(int i=0; i<max(arr[0], arr[n]); i++){
-        int min = 0;
+    int minimax = 100;
+    for(int i=max(arr[0], arr[n]); i<=maxArr; i++){
+        int max = 100;
         if(IsPossible(i))
-            min = i;
-        if(min > minimax)
-            minimax = min;
+            max = i;
+        //cout << i << " " << max <<endl;
+        if(max < minimax)
+            minimax = max;
     }
 
     cout << minimax;
