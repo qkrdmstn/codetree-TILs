@@ -4,7 +4,7 @@ using namespace std;
 
 int n;
 string arr;
-int GetDist(string str){
+int GetDist(string str){ //가장 가까운 두 사람의 거리 반환
 
     int minDist = n;
     for(int i=0; i<n; i++){
@@ -29,6 +29,7 @@ int main() {
     cin >> n;
     cin >> arr;
 
+    //최소거리 계산
     int maxDist = 0;
     for(int i=0; i<n; i++){
         string str = arr;
@@ -36,10 +37,11 @@ int main() {
         str[i] = '1';
         
         int minDist = GetDist(str);
-        if(minDist > maxDist)
+        if(minDist > maxDist) //최소값
             maxDist = minDist;
     }
 
+    //출력
     cout << maxDist;
     return 0;
 }
