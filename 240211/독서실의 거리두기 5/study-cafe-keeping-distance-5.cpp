@@ -12,6 +12,10 @@ int GetDist(string str){
             int dist = 1;
             while(str[i+dist] != '1'){
                 dist++;
+                if(i+dist >= n){
+                    dist = n;
+                    break;
+                }
             }
             if(dist < minDist)
                 minDist = dist;
