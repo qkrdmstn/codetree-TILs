@@ -33,10 +33,10 @@ int main() {
     int maxDist = 0;
     for(int i=0; i<n; i++){
         string str = arr;
-        if(arr[i] == '1')   continue;
-        arr[i] = '1';
+        if(str[i] == '1')   continue;
+        str[i] = '1';
         
-        int minDist = GetDist(arr);
+        int minDist = GetDist(str);
         if(minDist > maxDist) //최소값
             maxDist = minDist;
     }
