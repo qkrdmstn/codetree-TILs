@@ -32,11 +32,10 @@ int main() {
     //최소거리 계산
     int maxDist = 0;
     for(int i=0; i<n; i++){
-        string str = arr;
-        if(str[i] == '1')   continue;
-        str[i] = '1';
+        if(arr[i] == '1')   continue;
+        arr[i] = '1';
         
-        int minDist = GetDist(str);
+        int minDist = GetDist(arr);
         if(minDist > maxDist) //최소값
             maxDist = minDist;
     }
