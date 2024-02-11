@@ -35,11 +35,10 @@ int main() {
     }
 
     int minimax = 100;
-    for(int i=max(arr[0], arr[n]); i<=maxArr; i++){
+    for(int a=max(arr[0], arr[n-1]); a<=maxArr; a++){
         int max = 100;
-        if(IsPossible(i))
-            max = i;
-        //cout << i << " " << max <<endl;
+        if(IsPossible(a))
+            max = a;
         if(max < minimax)
             minimax = max;
     }
