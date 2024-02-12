@@ -3,19 +3,18 @@
 using namespace std;
 
 int n;
-int arr[1000] = {0};
-int sum[1000] = {0};
+int arr[1001] = {0};
+int sum[1001] = {0};
 bool IsPossible(int a0)
 {
     arr[0] = a0;
-    bool flag[1000] = {false};
+    bool flag[1001] = {false};
     for(int i=1; i<n; i++){
         arr[i] = sum[i-1] - arr[i-1];
         if(arr[i] > n || arr[i] < 1 || flag[arr[i]])
             return false;
         flag[arr[i]] = true;
     }
-    
     return true;
 }
 
