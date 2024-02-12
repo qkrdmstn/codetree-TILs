@@ -3,8 +3,8 @@
 using namespace std;
 
 int n;
-int arr[1001] = {0};
-int sum[1001] = {0};
+int arr[1000] = {0};
+int sum[1000] = {0};
 bool IsPossible(int a0)
 {
     arr[0] = a0;
