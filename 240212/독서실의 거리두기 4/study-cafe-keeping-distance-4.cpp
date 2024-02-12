@@ -7,11 +7,13 @@ string str;
 int GetClosestDist(string str)
 {
     int minDist = 100;
-    for(int i=0; i<n; i++){
+    for(int i=0; i<n-1; i++){
         if(str[i] != '1') continue;
         int dist = 1;
         while(str[i+dist] == '0'){
             dist++;
+            if(i+dist >= n)
+                dist = 100;
         }
         if(dist < minDist)
             minDist = dist;
@@ -26,9 +28,9 @@ int main() {
 
     int maxDist = 0;
     for(int i=0; i<n; i++){
-        if(str[i] == '1') continue;
         for(int j=0; j<n; j++){
-            if(str[j] == '1') continue;
+            if(i == j) continue;
+            if(str[i] == '1' || str[j] == '1') continue;
             
             string temp = str;
             temp[i] = '1';
