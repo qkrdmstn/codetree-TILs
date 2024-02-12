@@ -10,7 +10,7 @@ int main() {
     for(int i=0; i<n; i++)
         cin >> height[i];
 
-    int minCost = 100000;
+    int minCost = 100000000;
     for(int i=0; i<=100; i++){
         int cost = 0;
         for(int j=0; j<n; j++){
