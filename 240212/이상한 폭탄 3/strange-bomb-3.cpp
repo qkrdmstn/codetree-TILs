@@ -8,6 +8,7 @@ int CountBomb(int idx)
 {
     int cnt = 0;
     for(int i=0; i<n; i++){
+        if(idx == i) continue;
         if(bomb[idx] != bomb[i]) continue;
         if(abs(idx-i) <= k)
             cnt++;
