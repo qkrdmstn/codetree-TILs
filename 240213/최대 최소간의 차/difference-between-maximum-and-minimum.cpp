@@ -13,7 +13,7 @@ int main() {
         cin >> arr[i];
 
     int minCost = INT_MAX;
-    for(int i=0; i<=100; i++){ //시작점 i 설정 [i,i+k] 범위 내로 수들을 수정 
+    for(int i=0; i<=117; i++){ //시작점 i 설정 [i,i+k] 범위 내로 수들을 수정 
         int cost = 0;
         for(int j=0; j<n; j++){ //수정 비용 계산
             if(arr[j] > i+k)
