@@ -17,9 +17,9 @@ int main() {
         int cost = 0;
         for(int j=0; j<n; j++){ //수정 비용 계산
             if(arr[j] > i+k)
-                cost += (i+k - arr[j])*(i+k - arr[j]);
+                cost += (arr[j] - (i+k));
             if(arr[j] < i)
-                cost += (arr[j] - i)*(arr[j] - i);
+                cost += (i - arr[j]);
         }
         
         if(cost < minCost) //최소 비용 계산
