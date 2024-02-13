@@ -10,7 +10,6 @@ bool IsPossible(int temp2[], int a) //H 점수가 가능한 원소인가.
         if(temp2[i] >= a)
             cnt++;
     }
-
     if(cnt >= a)
         return true;
     else
@@ -18,7 +17,7 @@ bool IsPossible(int temp2[], int a) //H 점수가 가능한 원소인가.
 }
 
 int main() {
-
+    //입력
     cin >> n >> l;
     for(int i=0; i<n; i++)
         cin >> arr[i];
@@ -32,7 +31,6 @@ int main() {
         int cnt = 0;
         int flag = false;
         while(true){
-
             if(cnt > l) break;
             if(IsPossible(temp, temp[i])){
                 flag = true;
