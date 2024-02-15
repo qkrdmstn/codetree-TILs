@@ -17,9 +17,9 @@ int main() {
 
     if(IsOverlap()){
         if(a<=c && d<=b)
-            cout << abs(c-d);
-        else if(c<=a && b<=d)
             cout << abs(a-b);
+        else if(c<=a && b<=d)
+            cout << abs(c-d);
         else if(a < c)
             cout << abs(a-d);
         else if(c < a)
