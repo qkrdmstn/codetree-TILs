@@ -15,11 +15,16 @@ bool IsOverlap()
 int main() {
     cin >> a >> b >> c >> d;
 
-    if(IsOverlap())
-        cout << abs(a-d);
+    if(IsOverlap()){
+        if((a<c && d<b)
+            cout << abs(a-b);
+        else if((c<a && b<d))
+            cout << abs(c-d);
+        else
+            cout << abs(a-d);
+    }
     else
         cout << abs(a-b) + abs(c-d);
     
     return 0;
-
 }
