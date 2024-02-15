@@ -1,8 +1,18 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
+int a, b, c, d;
+bool IsOverlap()
+{
+    if(a<b && c<b)
+        return false;
+    else if(c<a && d<a)
+        return false;
+    return true;
+}
+
 int main() {
-    int a, b, c, d;
     bool arr[101] = {false};
 
     cin >> a >> b >> c >> d;
@@ -11,6 +21,11 @@ int main() {
     for(int i=c; i<=d; i++)
         arr[i] = true;
 
+    if(IsOverlap()){
+        cout << abs(a-d);
+        return 0;
+    }
+    
     int cnt = 0;
     for(int i=0; i<=100; i++){
         if(arr[i])
