@@ -22,7 +22,7 @@ int main() {
     bool flag = true;
     for(int i=0; i<n-1; i++){
         for(int j=i+1; j<n; j++){
-            if(!IsOverlap())
+            if(!IsOverlap(x1[i], x2[i], x1[j], x2[j]))
                 flag = true;
         }
     }
