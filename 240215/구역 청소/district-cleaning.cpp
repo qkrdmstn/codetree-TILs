@@ -25,13 +25,13 @@ int main() {
         cout << abs(a-d);
         return 0;
     }
-    
+
     int cnt = 0;
     for(int i=0; i<=100; i++){
         if(arr[i])
             cnt++;
     }
 
-    cout << cnt - 1;
+    cout << cnt - 2;
     return 0;
 }
