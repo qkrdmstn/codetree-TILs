@@ -12,18 +12,22 @@ bool IsOverlap(int a, int b, int c, int d)
 
 int main() {
     int n;
-    int x1[100] = {0};
-    int x2[100] = {0};
+    int arr[101] = {0};
 
     cin >> n;
-    for(int i=0; i<n; i++)
-        cin >> x1[i] >> x2[i];
+    for(int i=0; i<n; i++){
+        int x1, x2;
+        cin >> x1 >> x2;
+        for(int j=x1; j<=x2; j++){
+            arr[j]++;
+        }
+    }
 
-    bool flag = true;
-    for(int i=0; i<n-1; i++){
-        for(int j=i+1; j<n; j++){
-            if(!IsOverlap(x1[i], x2[i], x1[j], x2[j]))
-                flag = true;
+    bool flag = false;
+    for(int i=0; i<=100; i++){
+        if(arr[i] == n){
+            flag = true;
+            break;
         }
     }
 
