@@ -5,7 +5,7 @@ using namespace std;
 int a, b, c, d;
 bool IsOverlap()
 {
-    if(a<b && c<b)
+    if(a<c && b<c)
         return false;
     else if(c<a && d<a)
         return false;
@@ -13,26 +13,13 @@ bool IsOverlap()
 }
 
 int main() {
-    bool arr[101] = {false};
-
     cin >> a >> b >> c >> d;
-    for(int i=a; i<=b; i++)
-        arr[i] = true;
-    for(int i=c; i<=d; i++)
-        arr[i] = true;
 
-    if(IsOverlap()){
+    if(IsOverlap())
         cout << abs(a-d);
-    }
-    else{
-        int cnt = 0;
-        for(int i=0; i<=100; i++){
-            if(arr[i])
-                cnt++;
-        }
-        cout << cnt - 1;
-    }
-
+    else
+        cout << abs(a-b) + abs(c-d);
+    
     return 0;
 
 }
