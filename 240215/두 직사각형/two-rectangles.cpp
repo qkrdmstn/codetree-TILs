@@ -30,6 +30,6 @@ int main() {
     if(IsOverlapAABB())
         cout << "overlapping";
     else
-        cout << "nonoverlaping";
+        cout << "nonoverlapping";
     return 0;
 }
