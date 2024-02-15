@@ -16,7 +16,7 @@ int main() {
     cin >> a >> b >> c >> d;
 
     if(IsOverlap()){
-        if((a<c && d<b)
+        if(a<c && d<b)
             cout << abs(a-b);
         else if((c<a && b<d))
             cout << abs(c-d);
