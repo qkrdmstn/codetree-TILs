@@ -6,9 +6,10 @@ int n, m, p;
 char c[101];
 int u[101];
 
-bool IsRead(char name)
+
+bool IsRead(char name, int idx)
 {
-    for(int i=p; i<=m; i++){
+    for(int i=idx; i<=m; i++){
         if(c[i] == name)
             return true;
     }
@@ -23,12 +24,21 @@ int main() {
 
     if(u[p] == 0)
         return 0;
-        
+    
+
+
     for(int i=65; i<65+n; i++){
-        if(!IsRead(i)){
-            char name = i;
-            cout << name << " ";
+        char person = i;
+        bool read = false;
+
+        for(int j=1; j<=m; j++){
+            if(u[j] >= u[p] && c[j] == person)
+                read = true;
         }
+
+        if(read = false)
+            cout << person << " ";
     }
+    
     return 0;
 }
