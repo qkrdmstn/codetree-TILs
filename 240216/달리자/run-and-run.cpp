@@ -14,9 +14,8 @@ int main() {
         cin >> b[i];
 
     int cost = 0;
-    for(int i=n-1; i>=1; i--){
+    for(int i=n-1; i>=1; i--){ //오른쪽부터 차례대로 채우기
         if(a[i] == b[i]) continue;
-
         while(a[i] != b[i]){
             a[i-1]--;
             a[i]++;
