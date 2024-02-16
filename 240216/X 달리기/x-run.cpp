@@ -11,12 +11,22 @@ int main() {
     while(curPos != x){
         curPos += curV;
 
-        if(curPos < x/2)
-            curV++;
-        else if(curV == 1)
-            curV = curV;
-        else if(curPos >= x/2)
-            curV--;
+        if(x%2 == 0){
+            if(curPos < x/2)
+                curV++;
+            else if(curV == 1)
+                curV = curV;
+            else if(curPos >= x/2)
+                curV--;
+        }
+        else{
+            if(curPos < x/2 + 1)
+                curV++;
+            else if(curV == 1)
+                curV = curV;
+            else if(curPos >= x/2 + 1)
+                curV--;            
+        }
 
         time++;
     }
