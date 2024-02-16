@@ -17,9 +17,8 @@ int main() {
         int temp = pos[index]; //이전 위치
         cin >> pos[index];
 
-        if(temp != -1 && pos[index] != temp){
+        if(temp != -1 && pos[index] != temp)
             cnt++;
-        }
     }
 
     cout << cnt;
