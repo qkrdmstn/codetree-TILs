@@ -10,7 +10,8 @@ int main() {
     int time = 0;
     while(curPos != x){
         curPos += curV;
-        if(curPos <= x/2)
+
+        if(curPos < x/2)
             curV++;
         else if(curV == 1)
             curV = curV;
