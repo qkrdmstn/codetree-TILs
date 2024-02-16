@@ -21,6 +21,9 @@ int main() {
     for(int i=1; i<=m; i++)
         cin >> c[i] >> u[i];
 
+    if(u[p] == 0)
+        return 0;
+        
     for(int i=65; i<65+n; i++){
         if(!IsRead(i)){
             char name = i;
