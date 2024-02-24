@@ -18,9 +18,10 @@ int main() {
         else if(curPos >= x/2)
             curV--;
 
+
+        time++;
         if(curPos >= x)
             break;
-        time++;
     }
     
     cout << time;
