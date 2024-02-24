@@ -18,7 +18,7 @@ int main() {
         else if(curPos >= x/2)
             curV--;
 
-        if(curPos > x)
+        if(curPos >= x)
             break;
         time++;
     }
